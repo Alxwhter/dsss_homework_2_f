@@ -1,8 +1,11 @@
 import unittest
-from math_quiz import function_A, function_B, function_C
+from math_quiz import random_number, random_mathsymbol, calculate_solution
 
 
 class TestMathGame(unittest.TestCase):
+    """
+    Class to Test the function of the Math Game
+    """
 
     def test_function_A(self):
         # Test if random numbers generated are within the specified range
