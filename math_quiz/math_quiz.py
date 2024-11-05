@@ -36,7 +36,7 @@ def random_mathsymbol():
     return random.choice(['+', '-', '*'])
 
 
-def calculate_solution(n1, n2, o):
+def calculate_solution(n1, n2, operator):
     """
     Returns first the string of the calculation
     and secondly the solution of the calculation
@@ -50,7 +50,7 @@ def calculate_solution(n1, n2, o):
     n2 :   integer
         Number 2
     
-    o  :   string
+    operator  :   string
         mathmatic symbol; only +, - and * is allowed
     
     Returns
@@ -61,14 +61,14 @@ def calculate_solution(n1, n2, o):
         the solution of the calculation
     """
     try:
-        p = f"{n1} {o} {n2}"
-        if o == '+': a = n1 + n2
-        elif o == '-': a = n1 - n2
-        elif o == '*': a = n1 * n2
+        p = f"{n1} {operator} {n2}"
+        if operator == '+': a = n1 + n2
+        elif operator == '-': a = n1 - n2
+        elif operator == '*': a = n1 * n2
         #else: a = n1 * n2
         return p, a
     except ValueError:
-        print("Invalid input for summation")
+        print("ValueError")
     else:
         print("Invalid inputs of numbers")
 
